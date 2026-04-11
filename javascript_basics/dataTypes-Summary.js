@@ -33,3 +33,11 @@ const myFunction = function(){
 /*🧠 What that means
 You don’t need to declare data types explicitly
 The type is decided at runtime */
+
+// ************************************** MEMORIES *************************
+// THERE ARE TWO TYPE OF MEMORIES 
+// STACK AND HEAP
+// STACK is used to save PRIMITIVE data types 
+// HEAP is used to save NON PRIMITIVE data types 
+/*so whenever something goes in stack we get the copy of that thing to make chnages 
+whereas whenever something goes in heap we get its address to make chnages(reference)*/
