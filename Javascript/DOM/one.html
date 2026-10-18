@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom learning</title>
+    <style>
+      .bg-black{
+        background-color: #212121;
+        color: #fff;
+      }
+    </style>
+</head>
+<body class="bg-black">
+    <div>
+        <h1 id = "title" class = "heading">Dom learning <span style="display: none;">test text </span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas nulla iure, magni ipsum voluptatem eius, quae praesentium quod quidem et voluptas accusamus voluptatum reprehenderit est, odit ipsam saepe minima officia.</p>
+        <input type="password" name="" id="">
+    </div>
+    
+</body>
+</html>
+
+
+
+<!-- DOM
+In JavaScript, the DOM (Document Object Model) is a programming interface that represents an HTML or XML document as a tree of objects.
+
+Think of a web page like this:
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1 id="title">Hello World</h1>
+    <button>Click Me</button>
+  </body>
+</html>
+
+The browser converts it into a DOM tree:
+Document
+ └── html
+      └── body
+           ├── h1
+           │    └── "Hello World"
+           └── button
+                └── "Click Me"
+
+JavaScript can use the DOM to:
+Read page content
+Change text and styles
+Add or remove elements
+Respond to user actions (clicks, typing, etc.)
+
+window is a complex object which cantains various elements related to web page ...one of its element is document
+
+document object represents the entire HTML page loaded in the browser.
+
+window
+  └── document
+         └── HTML page (DOM)
+  -->
+
+
+  <!-- 
+  1st METGHOD how to target usig ID 
+  document.getElementById('id name') such as title in our case for heading1
+  document.getElementById('title').className from this we can fetch its class name // heading
+
+  this is another way to fetch the attribute for an element
+  document.getElementById('title').getAttribute('class') // heading 
+  document.getElementById('title').getAttribute('id') // title
+
+  we can also set the vallues of attribute in following way 
+  document.getElementById('title').setAttribute('class','tanish') // this will change 
+  class = 'heading' to class = 'tanish'
+
+  now say we wnat to make changes in the css of the element which we have grabbed
+  const tan = document.getElementById('title');
+  tan.style.backgroundColor = 'green';
+  similarly we can change any thing in css like we can give padding too
+  tan.style.padding = '15px'; 
+
+  to take out what is the content written in th element 
+  title.textContent // DOM learning test text ==> it will show every thing no matter what type of styling is given
+  title.innerText // DOM learning ==> this will show text based on the styling given 
+  title.innerHTML // Dom learning <span style="display: none;">test text </span> ==>this will give full HTML inside the element 
+
+  another way to select an element 
+  document.querySelector('h1')// this will give me only the first h1 element 
+  using this we can select any thing by giving some thing which can recognice it 
+  such as what it is such as we wrote h1 other things could be id or class etc.
+
+  calling same element usig class name 
+  document.querySelector('.heading')
+
+  calling same element using id
+  document.querySelector('#title')
+
+  calling input tag element 
+  document.querySelector('input[type = "password"]')
+
+   -->

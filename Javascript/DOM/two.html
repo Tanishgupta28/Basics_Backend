@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | TanishGupta</title>
+</head>
+<body>
+    <div class ="parent">
+        <div class="day">Moday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+</html>
+<!-- 
+
+here first we select parent class ans save it in vriable called parent of const type
+const parent = document.querySelector(".parent");
+console.log(parent.children); // gives all the elemnt present in the element have class name parent
+// this gives us html collection which shows array like property 
+// so to access first element in this class we can write:-
+console.log(parent.children[1]); // there is no 0 indexing 
+// we can print the contnet written in it like this 
+console.log(parent.children[1].innerHTML) // this gives Monday 
+//to print all the values of children present in the class 
+// we use for loop 
+for(let i = 0; i<parent.children.length; i++){
+console.log(parent.children[i].innerHTML);
+}
+// prints 
+Monday
+Tuesday 
+Wednessday 
+Thursday 
+// we can change the style of children too 
+parent.children[1].style.color = orange;
+//if we wnat to specificaly access only the first child then 
+console.log(parent.firstElementChild);
+//similarly if we wnat to specificaly access only the last child then 
+console.log(parent.lastElementChild);
+//suppose if we have accessed a child elemet the we can acces its parent element too 
+cont dayOne = Document.querySelector('.day') // this will select class were it si written Monday
+// since that is the first element have class day
+//now if we want to access its parent 
+consol.log(dayOne.parentElement);
+//we can also access next element having the same class name i.e day by doing following 
+console.log(datOne.nextElementSibling);
+// To access a tree structure which have more things in detail other than children within the class
+// these are called nodes
+console.log(parent.childNodes);// give comple tree structure of the html presen tin prent class
+ -->

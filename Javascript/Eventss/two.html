@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+</html>
+
+<!-- 
+// functions for asynchronus work
+
+// setTimeOut () => this is the method whihc calls API 
+// syntax of setTimeout 
+//setTimeout(function(){},1000); at last we have given time in milisecond
+//now what it does => it runs the function after the time which is mentioned at the end like here
+// the function will be called after 2 seconds
+
+// clearTimeout() => it is to stop the function to get executed written in timeout before time 
+// syntax => clearTimeout(setTimeout(...))
+// say we want to change text "chai aur code" to "best JS series" after 5 seconds 
+// but we also want that if we press stop button then it does not happen
+
+const changeText = function(){
+        document.querySelector('h1').innerHTML = "best JS series"
+    }
+const changeMe = setTimeout(changeText, 2000) // here we put tha in veriable that does not means
+// time out function is not being executed 
+document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+    })
+ -->

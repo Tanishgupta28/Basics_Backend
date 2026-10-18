@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+</html>
+
+<!-- 
+// functions for asynchronus work
+
+// setInterval(function(){},1000) => helps us keep executin a function after some iterval
+// here function(){} will keep on executig after every 1 second
+// say if our function needs some kind of input then syntax => 
+// setInterval(function(){},1000,input value)
+
+// clearInterval(setInterval(...)) => to stop what ever is happening due to setInterval
+// say we want that when we press start its start printing in colcole "hi Tanish" after every 
+// 2 seconds and when i press stop it stops printing 
+
+const startpress = document.querySelector("#start");
+const stoppress = document.querySelector("#stop");
+
+let printIt = null;
+
+startpress.addEventListener("click", function () {
+
+    if (printIt !== null) return; // already running
+
+    printIt = setInterval(function () {
+        console.log("Hi Tanish");
+    }, 2000);
+});
+
+stoppress.addEventListener("click", function () {
+    clearInterval(printIt);
+    printIt = null;
+});
+-->

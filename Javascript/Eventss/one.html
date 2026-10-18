@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+</html>
+
+<!-- 
+//we want to show an alert message when we click on owl image 
+document.getElementById('owl').onclick = function(){
+alert("its owl");
+}
+
+// but here we use something more powerful rather writing specific thing like "onclick" for
+// click event we use addEventListener() which can recognise different events and take action
+
+document.querySelector("#owl").addEventListner('event name',function(e){},false(default)/true) 
+e => event object named as e 
+document.querySelector("#owl").addEventListner('click',function(){
+alert("its owl")});
+// things important to study related to event:-
+// type, timestamp, defaultPrevented, target, toElement, srcElement, clientX, clientY, screenX
+// screenY, altKey, ctrlKey, shiftKey, KeyCode
+
+// true or false written at the end is related to event propagation 
+// so there are two context of event propagation 1) event bubbling 2) event capturing 
+// if false => event bubbling
+// if true => event capturing 
+
+// to understand this lets take an example 
+document.getElementById('images').addEventListner('click',function(){
+console.log("clicked insed unordered list");
+})
+document.getElementById('owl').addEventListner('click',function(){
+console.log("clicked owl");
+})
+
+// now the question is when we click owl what will be printed in console
+// since when we click owl we are actually also click inside unordered list 
+// so here happens event propagation 
+// since by defalt it is false hence it is bubble type event propagation 
+// so when we click owl 
+// first clicked owl will be printed then clicked insed unordered list will be printed
+// it shows property like bubble (like bubble goes from inside to out side from down to up 
+// here also happens same firts owl then ul)
+
+// if we would have setted both of them to true
+
+document.getElementById('images').addEventListner('click',function(){
+console.log("clicked insed unordered list");
+},true);
+document.getElementById('owl').addEventListner('click',function(){
+console.log("clicked owl");
+},true);
+// then is that case capturing mode of event propagation is on hence we go from top to bottom 
+// so here first clicked insed unordered list will be printed then clicked owl
+
+//if we want that there should be no propagation of events then 
+
+document.getElementById('images').addEventListner('click',function(e){
+e.stopPropagation();
+console.log("clicked insed unordered list");
+},true);
+
+// preventDefault => this is used when we do not what the thing to show its default behaviour
+// when a perticular event happens 
+// for example => say there is a link and when we click on it we are directed somewhere 
+// we do not want this link to show this behaviour on clicking so we can use preventDefault
+
+// say we dont whant google link to work above instead we want to print "google clicked"
+// on console when it is clicked 
+
+document.getElementById('google').addEventListner('click',function(e){
+e.preventDefault();
+e.stopPropagation();
+console.log("google clicked");
+},flase)
+
+// e.target => here e is the event object and target hel us to recognise that from where the event
+// is being occured
+
+// Task to remove an image once it is clicked 
+
+document.querySelector('#images').addEventListner('click',function(e){
+if(e.target.tagName ==='IMG'){
+e.target.parentNode.remove();
+}
+})
+-->

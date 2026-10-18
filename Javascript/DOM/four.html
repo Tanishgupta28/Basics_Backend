@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <!-- unordered list -->
+     <ul class="language">
+        <li>JavaScript</li>
+     </ul>
+</body>
+</html>
+
+<!-- 
+//Our target here is to make a function which can append elements in unordered list
+// basically here we are going to append new languages in our unordered list 
+function addLanguage(langName){
+// first we will create an element which we want to append in unordered list
+const li = documnet.creatElement('li');
+// now add content in it 
+li.innerHTML = `${langName}`;
+// now we will attach it in unordered list 
+document.querySelector(".language").appendChild(li);
+}
+// now its time to fill our unordered list and display it on webpage
+addLanguage("python");
+addLanguage("CPP");
+// now there is problem in this function 
+// as we know that documnet file is a tree structure and whenever we call appendChild
+// we traverse whole tree and reach till end and then add the element so its not optimzed
+function optiAddLanguage(langName){
+const li = documnet.creatElement('li');
+li.appendChild(document.createTextNode(langName));
+document.querySelector(".language").appendChild(li);
+}
+
+// now what if we wnat to edit elements present in the unordered list
+// first we are going to select the element(say we want to edit the second element i.e python)
+const seconLang = document.querySelector("li:nth-child(2)") // use to selct specfic child
+secondLang.innerHTML = "Typescript";
+// other way to do the same thing 
+// first we create new li
+const newli = document.createElement('li');
+newli.textContent = "Typescript";
+secondLang.replacewith(newli);
+
+// now we need to remove an element 
+//suppose we wht to remove second language 
+const seconLang = document.querySelector("li:nth-child(2)")
+secondLang.remove();
+-->
