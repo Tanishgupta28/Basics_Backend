@@ -1,0 +1,15 @@
+# Dependencies and generated builds at any level
+node_modules/
+dist/
+
+# Local configuration and transcript
+.env
+.env.*
+tutorial_transcript.txt
+
+# Test output and local working tools
+test-results/
+playwright-report/
+.npm-cache/
+.publish/
+*.log
