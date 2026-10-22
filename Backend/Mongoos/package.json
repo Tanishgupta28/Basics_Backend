@@ -1,0 +1,20 @@
+{
+  "name": "mongoose-data-modelling-tutorial",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Transcript-based Chai aur Code Mongoose modelling practice",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "start": "node examples/models.js",
+    "example:syntax": "node examples/schema-syntax.js",
+    "test": "node --test tests/models.test.js",
+    "db:check": "node scripts/check-mongodb.js",
+    "test:db": "node --test tests/mongodb.test.js"
+  },
+  "dependencies": {
+    "mongoose": "9.11.3"
+  }
+}
