@@ -1,0 +1,16 @@
+# Dependencies, local secrets and supplied source transcript
+node_modules/
+.env
+.env.*
+tutorial_transcript.txt
+
+# Generated output and local tooling
+coverage/
+dist/
+build/
+*.log
+.npm-cache/
+.verification/
+.publish/
+.DS_Store
+Thumbs.db
