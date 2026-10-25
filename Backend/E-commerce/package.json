@@ -1,0 +1,31 @@
+{
+  "name": "backend-course-data-modeling",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Transcript reconstruction: E-commerce and hospital Mongoose data models",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "config": {
+    "mongodbMemoryServer": {
+      "disablePostinstall": true,
+      "downloadDir": ".cache/mongodb-binaries"
+    }
+  },
+  "scripts": {
+    "start": "node scripts/demo.js",
+    "demo": "node scripts/demo.js",
+    "demo:alternatives": "node examples/schema-alternatives.js",
+    "check": "node scripts/check-syntax.js",
+    "test": "node --test tests/models.test.js",
+    "test:db": "node scripts/verify-database.js",
+    "test:db:configured": "node --env-file=.env scripts/verify-database.js --configured"
+  },
+  "dependencies": {
+    "mongoose": "^9.11.4"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^11.3.0"
+  }
+}
